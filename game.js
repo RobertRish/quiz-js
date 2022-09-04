@@ -1,5 +1,5 @@
 const question = document.querySelector('#question');
-const chioces = Array.from(document.querySelectorAll('#.chioce-text'));
+const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText= document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
@@ -7,7 +7,7 @@ const progressBarFull = document.querySelector('#progressBarFull');
 let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
-let questionCounter = 0;
+let questionCounter = 0
 let availableQuestions = []
 
 let questions = [
@@ -52,7 +52,7 @@ startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
-    getNewQuestions()
+    getNewQuestion()
 }
 
 getNewQuestion = () => {
@@ -66,11 +66,11 @@ getNewQuestion = () => {
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%` 
 
-    const questionsIndex = MAth.floor(Math.random() * availableQuestions.length)
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionIndex]
     question.innerText = currentQuestion.question
 
-    chioces.forEach(choice => {
+    choices.forEach(choice => {
         const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
     })
@@ -80,12 +80,12 @@ getNewQuestion = () => {
     acceptingAnswers = true
 }
 
-chioces.forEach(choice => {
+choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
-        const selectedChoice = e.targetconst 
+        const selectedChoice = e.target 
         const selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
