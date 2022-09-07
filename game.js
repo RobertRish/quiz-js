@@ -20,7 +20,7 @@ let questions = [
         answer: 1,
     },
     {
-        question: "Who invented the internet",
+        question: "Who invented the internet?",
         choice1: "Geoffrey Hinton",
         choice2: "Vinton Cerf and Bob Kahn",
         choice3: "Alan Turing",
