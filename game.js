@@ -12,37 +12,37 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'What is ?',
-        choice1: '1',
-        choice2: '2',
-        choice3: '3',
-        choice4: 'a;owefij',
-        answer: 2
+        question: "What is the capital of Canada?",
+        choice1: "Ottawa",
+        choice2: "Toronto",
+        choice3: "Montreal",
+        choice4: "Vancouver",
+        answer: 1,
     },
     {
-        question: 'What is it?',
-        choice1: '1',
-        choice2: '2e',
-        choice3: '3',
-        choice4: 'a;owefij',
-        answer: 2
+        question: "Who invented the internet",
+        choice1: "Geoffrey Hinton",
+        choice2: "Vinton Cerf and Bob Kahn",
+        choice3: "Alan Turing",
+        choice4: "Barbara Liskov",
+        answer: 2,
     },
     {
-        question: 'What is bulg?',
-        choice1: '1',
-        choice2: '2',
-        choice3: '3',
-        choice4: 'a;owefij',
-        answer: 2
+        question: "Who was Hillary Clinton's running mate in 2016?",
+        choice1: "Herman Caine",
+        choice2: "Larry Lessig",
+        choice3: "Donald Rumsfield",
+        choice4: "Tim Kaine",
+        answer: 4,
     },
     {
-        question: 'What is fun ?',
-        choice1: '1',
-        choice2: '2',
-        choice3: '3',
-        choice4: 'a;owefij',
-        answer: 2
-    }
+        question: "What is a diencephalon?",
+        choice1: "the lower part of the brain that's connected to the spinal cord",
+        choice2: "The portion of the brain in the back of the head between the cerebrum and the brain stem",
+        choice3: "the caudal (posterior) part of the forebrain, containing the epithalamus, thalamus, hypothalamus, and ventral thalamus and the third ventricle.",
+        choice4: "A roughly almond-shaped mass of gray matter inside each cerebral hemisphere, involved with the experiencing of emotions.",
+        answer: 3,
+    },
 ]
 
 const SCORE_POINTS = 100
@@ -67,7 +67,7 @@ getNewQuestion = () => {
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%` 
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
-    currentQuestion = availableQuestions[questionIndex]
+    currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
     choices.forEach(choice => {
@@ -99,6 +99,7 @@ choices.forEach(choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
+            
         }, 1000)
     })
 })
