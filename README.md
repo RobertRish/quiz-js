@@ -9,7 +9,7 @@ A quiz application that utilizes client-side storage to save quiz scores.
 HTML, CSS, JavaScript
       
 ## Screenshot
-![screenshot of quiz app](screenshot.png)
+![screenshot of quiz app](screenshot2.png)
 
 ## Questions
 Visit my GitHub page! [RobertRish](https://github.com/RobertRish)
