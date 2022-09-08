@@ -29,9 +29,9 @@ let questions = [
     },
     {
         question: "Who was Hillary Clinton's running mate in 2016?",
-        choice1: "Herman Caine",
+        choice1: "Herman Cain",
         choice2: "Larry Lessig",
-        choice3: "Donald Rumsfield",
+        choice3: "Donald Rumsfeld",
         choice4: "Tim Kaine",
         answer: 4,
     },
