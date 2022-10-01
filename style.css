@@ -78,7 +78,7 @@ justify-center {
 }
 
 #highscore-btn {
-    background: linear-gradient(90deg, rgb(10, 75, 255) 0%, rgb(0, 255, 234)100%);;
+    background: linear-gradient(90deg, rgb(110, 194, 169) 0%, rgb(0, 255, 234)100%);
 }
 
 #highscore-btn:hover {
